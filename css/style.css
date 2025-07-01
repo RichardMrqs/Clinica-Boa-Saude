@@ -1,0 +1,145 @@
+/* Estilos personalizados para a Clínica Médica */
+
+body {
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+    color: #333;
+    background-color: #f8f9fa;
+}
+
+/* Navbar */
+.navbar-brand {
+    font-weight: bold;
+    color: #007bff !important; /* Cor primária do Bootstrap */
+    font-size: 1.5rem;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    font-weight: 500;
+    transition: color 0.3s ease-in-out;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff; /* Cor primária do Bootstrap */
+}
+
+.navbar-nav .nav-item .btn {
+    border-radius: 50px; /* Botões mais arredondados */
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    font-weight: bold;
+}
+
+/* Seções */
+.page-section {
+    padding-top: 6rem; /* Espaçamento para a navbar fixa */
+    padding-bottom: 6rem;
+    min-height: calc(100vh - 100px); /* Garante que a seção tenha altura mínima */
+    display: none; /* Por padrão, todas as seções são escondidas pelo JS */
+}
+
+.page-section.active {
+    display: block; /* A seção ativa é exibida */
+}
+
+/* Jumbotron/Hero Section */
+.jumbotron {
+    padding: 8rem 0;
+    background-color: #007bff; /* Cor de fallback */
+    background-position: center center;
+    background-size: cover;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+.jumbotron::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+    z-index: 1;
+}
+
+.jumbotron .container {
+    position: relative;
+    z-index: 2;
+}
+
+.jumbotron h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.jumbotron p.lead {
+    font-size: 1.5rem;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+/* Cards de Serviço e Médicos */
+.card {
+    border: none;
+    border-radius: 15px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+    object-fit: cover;
+    border: 5px solid #fff;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* Rodapé */
+footer {
+    background-color: #343a40; /* Cor escura do Bootstrap */
+    color: #f8f9fa;
+}
+
+footer a {
+    color: #adb5bd;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Formulário de Login */
+#loginModal .modal-header {
+    border-bottom: none;
+}
+
+#loginModal .modal-title {
+    font-weight: bold;
+}
+
+/* Responsividade adicional */
+@media (max-width: 767.98px) {
+    .jumbotron h1 {
+        font-size: 2.5rem;
+    }
+    .jumbotron p.lead {
+        font-size: 1.2rem;
+    }
+    .page-section {
+        padding-top: 4rem;
+        padding-bottom: 4rem;
+    }
+    .navbar-brand img {
+        height: 30px;
+    }
+    .navbar-nav .nav-item .btn {
+        margin-top: 10px;
+        width: 100%;
+    }
+}
